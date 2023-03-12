@@ -257,6 +257,7 @@ if(!import.meta.env.SSR && __VUE_HMR_RUNTIME__.compatible){
     __VUE_HMR_RUNTIME__.createRecord(${idJSON}, __component__.options)
   }
    import.meta.hot.accept((update) => {
+     if (!update) return
       __VUE_HMR_RUNTIME__.${
         functional ? 'rerender' : 'reload'
       }(${idJSON}, update.default)
